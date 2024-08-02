@@ -1,0 +1,3 @@
+.navButton {
+  @apply bg-sky-500 text-white w-24 p-3 m-2 rounded-full;
+}
