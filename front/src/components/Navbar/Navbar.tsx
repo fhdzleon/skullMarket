@@ -60,6 +60,9 @@ const Navbar = () => {
           <Link href={PATHROUTES.ABOUT}>
             <span className="text-white hover:text-gray-400">About</span>
           </Link>
+          <Link href={PATHROUTES.PRODUCTS}>
+            <span className="text-white hover:text-gray-400">Products</span>
+          </Link>
           <Link href={PATHROUTES.CONTACT}>
             <span className="text-white hover:text-gray-400">Contact</span>
           </Link>
@@ -76,6 +79,11 @@ const Navbar = () => {
           <Link href={PATHROUTES.ABOUT}>
             <div className="block px-4 py-2 text-white hover:bg-gray-700">
               About
+            </div>
+          </Link>
+          <Link href={PATHROUTES.PRODUCTS}>
+            <div className="block px-4 py-2 text-white hover:bg-gray-700">
+              Products
             </div>
           </Link>
           <Link href={PATHROUTES.CONTACT}>

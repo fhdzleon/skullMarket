@@ -9,6 +9,15 @@ import { Order } from "@/interfaces/interfaces";
 const Dashboard: React.FC = () => {
   const { token, user } = useAuth();
   const [orders, setOrders] = useState<Order[]>([]);
+  let user2 = {
+    name: "Usuario no Existe",
+    email: "Email no existe",
+    phone: "Telefono no existe ",
+    address: "Direccion no existe",
+  };
+  if (user) {
+    user2 = user;
+  }
 
   useEffect(() => {
     const fetchOrderUsers = async () => {
@@ -42,22 +51,22 @@ const Dashboard: React.FC = () => {
         <div className="flex flex-col w-1/2 space-y-6 text-start">
           <div>
             <p className="text-secundary">Nombre:</p>
-            <p className="font-sans text-xl">{user!.name}</p>
+            <p className="font-sans text-xl">{user2!.name}</p>
           </div>
 
           <div>
             <p className="text-secundary">email:</p>
-            <p className="font-sans text-xl">{user!.email}</p>
+            <p className="font-sans text-xl">{user2!.email}</p>
           </div>
 
           <div>
             <p className="text-secundary">Dirección:</p>
-            <p className="font-sans text-xl">{user!.address}</p>
+            <p className="font-sans text-xl">{user2!.address}</p>
           </div>
 
           <div>
             <p className="text-secundary">Telefono:</p>
-            <p className="font-sans text-xl">{user!.phone}</p>
+            <p className="font-sans text-xl">{user2!.phone}</p>
           </div>
         </div>
       </div>

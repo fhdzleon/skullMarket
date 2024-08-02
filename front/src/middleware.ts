@@ -24,7 +24,7 @@ export function middleware(request: NextRequest) {
   console.log(user);
 
   if (!user) {
-    return NextResponse.redirect(new URL(PATHROUTES.PRODUCTS, request.url));
+    return NextResponse.redirect(new URL(PATHROUTES.LOGIN, request.url));
   }
 
   return NextResponse.next();
