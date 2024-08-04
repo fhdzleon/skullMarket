@@ -8,7 +8,7 @@ import { ProductPreview } from "@/interfaces/interfaces";
 const ListCards: React.FC = async () => {
   /*  const products = await fetchDataProducts("http://localhost:4000/products"); */
   const products = await fetchDataProducts(
-    "https://s7v9zfq0-4000.usw3.devtunnels.ms/products"
+    `${process.env.NEXT_PUBLIC_API_URL}/products`
   );
 
   return (

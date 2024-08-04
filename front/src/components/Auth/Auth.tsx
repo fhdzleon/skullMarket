@@ -80,7 +80,7 @@ const Auth: React.FC = () => {
         </div>
       ) : (
         <Link href={PATHROUTES.LOGIN}>
-          <button className="text-white justify-end flex  hover:text-slate-400 hover:scale-125">
+          <button className="text-white justify-end flex hover:text-gray-400">
             Iniciar sesión
           </button>
         </Link>

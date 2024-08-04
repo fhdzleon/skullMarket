@@ -2,8 +2,11 @@
 import ButtonProducts from "@/components/ButtonProducts/ButtonProducts";
 import Link from "next/link";
 import { PATHROUTES } from "@/helpers/PATHROUTES";
+import { FlipWords } from "@/components/ui/flip-words";
 
 const Home: React.FC = () => {
+  const words = ["gadgets", "smartphones", "wearbles", "accesorios"];
+
   return (
     <div className="flex flex-col text-white">
       <div className="flex flex-col items-center justify-center max-w-6xl px-10 mx-auto lg:flex-row">
@@ -107,9 +110,11 @@ const Home: React.FC = () => {
       </div>
 
       <div className="flex justify-center text-2xl">
-        <h1 className="px-2 mb-3 text-center md:mb-1">
-          Los mejores smart-Gadgets en un solo lugar
-        </h1>
+        <div className="text-xl px-3 text-center md:text-3xl mx-auto font-normal text-white dark:white">
+          Los mejores
+          <FlipWords words={words} />
+          en un solo lugar
+        </div>
       </div>
     </div>
   );
